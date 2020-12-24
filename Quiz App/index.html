@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <!--start introduction part -->
+    <div class="intro">
+        <h2 class="display-4">Welcome to Quiz App</h2>
+        <div class="buttons">
+            <button type="button" class="rule" data-toggle="modal" data-target="#quizRules">Rules</button>
+            <button class="start">Start</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="quizRules" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 style="color:grey" class="modal-title" id="exampleModalLongTitle">Quiz Rules</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ol class="container">
+                <li class="m-2" style="color:black">You will have only 15 seconds per each question.</li>
+                <li class="m-2" style="color:black">Once you select your answer it can't be undone.</li>
+                <li class="m-2" style="color:black">You can't select any option once time goes off.</li>
+                <li class="m-2" style="color:black">You can't exit from the Quiz while you're playing.</li>
+                <li class="m-2" style="color:black">You'll get points on the basis of your correct answers.</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--end introduction part -->
+    <!--start Quiz box -->
+    <div class="quiz_box removeItem">
+        <header>
+            <div class="title">Quiz App</div>
+            <div class="timer">
+                <div class="time_txt">Time Left</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+                <!-- <span>What does HTML stand for?</span> -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+                <!-- <div class="option">
+                    <span>Hyper Text Preprocessor</span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>
+                <div class="option">
+                    <span>Hyper Text Markup Language</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="option">
+                    <span>Hyper Text Markup Language</span>
+                </div>
+                <div class="option">
+                    <span>Hyper Text Markup Language</span>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+                <!-- <span><p>2</p>of<p>5</p>Questions</span> -->
+            </div>
+            <button class="next_btn">Next Que</button>
+        </footer>
+    </div>
+    <!--end Quiz box -->
+    <!--start of result -->
+    <div class="result_box removeItem">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text">
+            <!-- <span>You got <p>2</p>out of <p>5</p></span> -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <!-- <button class="quit">Quit Quiz</button> -->
+        </div>
+    </div>
+    <!--end of result -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/question.js"></script>
+</body>
+</html>
